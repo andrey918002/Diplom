@@ -20,7 +20,7 @@ Route::get('/{path1}/{path2}', function () {
 Route::post('/register', [RegistrationController::class, 'register']);
 Route::post('/login', [LoginController::class, 'login']);
 
-Route::get('/catalog', [ProductController::class, 'showProductList']);
+Route::post('/catalog', [ProductController::class, 'showProductList']);
 
 
 

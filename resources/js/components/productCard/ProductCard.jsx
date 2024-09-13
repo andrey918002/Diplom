@@ -30,7 +30,7 @@ export const ProductCard = ({product}) => {
 				</div>
 			</div>
 		</div>
-	);
+	);с
 };
 
 ProductCard.propTypes = {

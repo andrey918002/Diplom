@@ -30,12 +30,14 @@ export const Catalog = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-      fetch("/catalog")
+      fetch("/catalog", {
+          method: "post"
+      })
         .then(res => res.json())
         .then(
           (result) => {
             setIsLoaded(true);
-            setProducts(result);
+            setProducts(result.products);
           },
           (error) => {
             setIsLoaded(true);
@@ -45,7 +47,6 @@ export const Catalog = () => {
     }, [])
 
   console.log(products)
-
 
     return (
         <>
